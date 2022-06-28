@@ -1,16 +1,5 @@
 package dev.mvc.naver_chatting;
 
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.util.Date;
-
-import javax.crypto.Mac;
-import javax.crypto.spec.SecretKeySpec;
-
 import org.apache.tomcat.util.codec.binary.Base64;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -22,13 +11,23 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.crypto.Mac;
+import javax.crypto.spec.SecretKeySpec;
+import java.io.BufferedReader;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.Date;
+
 @Controller
 public class ChatCont {
 
     // 시크릿 키
-    private static String secretKey = "ZVpKSlJiYldkYUdZVHNzZUZZVlZoUlZqeWdRdEVTRVU=";
+    private static String secretKey = "WmJIVFVFekhRS1VQc0tzQ1BFbEVXSFRiZ1JVakVKV04=";
     // APIGW Invoe URL , 관련 Exception: 
-    private static String apiUrl = "https://53cecad6a9b048d5ab8434706e6bfd30.apigw.ntruss.com/custom/v1/5620/8729fb4f9110829d9795af04307798753a1501ce56719e2b94c3c5d7ca5c43f1";
+    private static String apiUrl = "https://pnyxil58sx.apigw.ntruss.com/custom/v1/7145/806383daa7eeeed5e16c3e965cd5e910b8e87a03714a787aeed81e9790decb6b";
     @RequestMapping("/naver_chatting")  // http://localhost:9093/naver_chatting
     public ModelAndView chat() {
         ModelAndView mav = new ModelAndView();
